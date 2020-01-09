@@ -1,0 +1,41 @@
+{
+    "name": "jaykandari/local.drupal",
+    "description": "Local setup for Drupal contributions.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jaideep Singh Kandari",
+            "email": "jaideepskandari@gmail.com"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.7"
+    },
+    "extra": {
+        "installer-paths": {
+            "drupal/core": [
+                "type:drupal-core"
+            ],
+            "drupal/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
+        }
+    }
+}
